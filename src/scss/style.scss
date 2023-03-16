@@ -1,0 +1,73 @@
+@import "components/var";
+
+@import "components/notifications";
+@import "components/passwordForm.scss";
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(../fonts/Arialn.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(../fonts/ArialTh.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(../fonts/ARIBL0.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Arial', sans-serif;
+	src: url(../fonts/G_ari_bd.TTF);
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'passstar';
+	src: url('./../fonts/passStar/passstar.eot');
+	src: url('./../fonts/passStar/passstar.eot') format('embedded-opentype'),
+	url('./../fonts/passStar/passstar.woff') format('woff'),
+	url('./../fonts/passStar/passstar.ttf') format('truetype'),
+	url('./../fonts/passStar/passstar.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body *{
+	box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial';
+  padding: 0;
+  margin: 0;
+}
+
+
+.btn-save {
+  background: #E0C463;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  font-family: 'Arial';
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+
+  @include sm {
+    border-radius: 12px;
+    padding: 18px 0;
+    font-size: 17px;
+    max-width: 220px;
+  }
+}
+
+
