@@ -115,39 +115,3 @@ function comparisonPassword() {
         }
     })
 };
-
-
-// Show/hide password
-function showPass() {
-    const showPass = document.querySelectorAll(".showPass");
-    showPass.forEach(item => {
-        item.classList.add('d-none');
-        const wrapPa = item.closest('.password-form-wrap');
-        const input = wrapPa.querySelector('.password-wrap');
-
-        input.addEventListener('keyup', function(){
-            if(input.value.length > 0){
-                item.classList.remove('d-none');
-            }else{
-                item.classList.add('d-none');
-            }
-        })
-        item.addEventListener('click', function(){
-            let sub = input.previousElementSibling;
-            if (sub.type === "text") {
-                sub.type = "password";
-                sub.style.display = "none";
-                input.style.display = "block";
-                item.classList.remove('view');
-                
-            } else {
-                sub.type = "text";
-                sub.style.display = "block";
-                input.style.display = "none";
-                item.classList.add('view');
-            }
-            input.focus();
-            input.selectionStart = input.value.length;
-        })
-    })
-}showPass();
