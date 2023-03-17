@@ -38,9 +38,11 @@ function resetPass(e){
     })
 }
 
-function repeatPass() {
-    if (confirmNewPassInput.value.length >= 8) {
-        confirmNewPassInput.nextElementSibling.style.border = "1px solid #e0c463";
+function repeatPass(e) {
+    if (e.value.length >= 8) {
+        e.style.border = "1px solid #e0c463";
+    } else {
+        e.style.border = "1px solid #c7c7c7";
     }
 }
 
