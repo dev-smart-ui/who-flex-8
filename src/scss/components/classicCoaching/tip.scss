@@ -1,0 +1,48 @@
+@import "components/var";
+
+.tip {
+    padding: 40px 0 ;
+
+    @include md {
+        padding: 50px 0;
+    }
+
+    &-card {
+        max-width: 930px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &__icon {
+            & svg {
+                width: 50px;
+
+                @include md {
+                    width: 108px;
+                }
+            }
+        }
+
+        &__title {
+            font-family: 'Circular';
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            color: #343434; 
+            max-width: 780px;
+            width: 100%;
+            margin-left: 13px;
+
+            @include md {
+                font-size: 28px;
+                line-height: 34px;  
+                margin-left: 36px;
+            }
+
+            @include lg {
+                font-size: 36px;
+                line-height: 46px;
+            }
+        }
+    }
+}

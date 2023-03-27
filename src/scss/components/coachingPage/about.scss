@@ -1,0 +1,338 @@
+@import "components/var";
+
+
+.about {
+    background: #FFFFFF;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding: 17px 12px 21px 12px;
+
+    @include xs {
+        padding: 17px 22px 21px 22px;
+    }
+
+    @include md {
+        max-width: 100%;
+        padding: 38px 33px 38px 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__left {
+        background: #F0F0F0;
+        padding: 23px 14px;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        justify-content: center;
+
+        @include sm {
+            max-width: 340px;
+            margin: auto auto 30px;
+        }
+
+        @include md {
+            text-align: center;
+            max-width: 160px;
+            display: block;
+            padding: 38px 9px 33px;
+            margin-bottom: 0;
+            margin: 0;
+        }
+
+        @include xl {
+            max-width: 175px;
+            padding: 38px 22px 33px;
+        }
+    }
+
+    &__right {
+        width: 100%;
+
+        @include md {
+            max-width: 80%;
+            margin-left: 20px;
+        }
+
+        @include lg {
+            max-width: 370px;
+        }
+
+        @include xl {
+            max-width: 566px;
+        }
+    }
+
+    &__img {
+        max-width: 77px;
+        margin-right: 14px;
+        width: 100%;
+
+        @include xs {
+            max-width: 112px;
+        }
+
+        & img {
+            width: 100%;
+        }
+
+        @include md {
+            margin-right: 0;
+            margin: auto;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        color: #000000;
+        margin: 9px 0 6px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        color: #484848;
+        display: block;
+    }
+
+    &-tab {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ADADAD;
+        margin-bottom: 22px;
+        justify-content: space-between;
+
+        &__item {
+            font-weight: 400;
+            font-size: 12px;
+            color: #000000;
+            padding-bottom: 11px;
+            position: relative;
+
+            @include xs {
+                font-size: 14px;
+            }
+
+            @include sm {
+                font-size: 16px;
+            }
+
+            &.active {
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -2px;
+                    background: #DDC160;
+                    width: 100%;
+                    left: 0;
+                    height: 3px;
+                }
+                font-weight: 500;
+                font-size: 13px;
+
+                @include xs {
+                    font-size: 14px;
+                }
+
+                @include sm {
+                    font-size: 17px;
+                }
+                
+            }
+
+            &:last-child {
+                padding: 0 11px 11px;
+                margin-left: 28px;
+            }
+        }
+
+        @include xs {
+            justify-content: start;
+        }
+    }
+
+    &-card {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 13px;
+
+            @include xs {
+                flex-wrap: nowrap;
+            }
+        }
+
+        &__item {
+            background: #FFFFFF;
+            border: 1px solid #D3D3D3;
+            border-radius: 100px;
+            padding: 9px 12px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 13px;
+            color: #5E5E5E;
+            margin-bottom: 10px;
+
+            @include xs {
+                margin-bottom: 0;
+            }
+
+            @include sm {
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: #797979;
+                color: #fff;
+            }
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &.active {
+                background: #666666;
+                color: #fff;
+            }
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #404040;
+            max-height: 285px;
+            overflow-y: auto;
+
+            @include sm {
+                max-height: 100%;
+            }
+        }
+    }
+    
+}
+
+.sample-card {
+    padding: 24px 28px 30px 21px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.07);
+    border-radius: 0px 10px 10px 10px;
+    margin-bottom: 30px;
+
+    @include sm {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+
+        & span {
+            font-family: 'Circular';
+            background: #E0C463;
+            display: block;
+            width: 29px;
+            height: 23px;
+            text-align: center;
+            margin: 10px auto 5px;
+            border-radius: 126.087px;
+            font-weight: 500;
+            font-size: 16.6522px;
+            color: #fff;
+            line-height: 24px;
+        }
+
+        @include sm {
+            width: 80px;
+            display: block;
+        }
+    }
+
+    &__name {
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000000;
+    }
+
+    &__data {
+        font-weight: 400;
+        font-size: 14px;
+        color: #727272;
+        margin-bottom: 13px;
+        margin-top: 10px;
+
+        @include sm {
+            margin-bottom: 16px;
+            margin-top: 23px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        color: #545454;
+
+        @include sm {
+            font-size: 17px;
+        }
+    }
+
+    &__right {
+        width: 100%;
+        
+        @include sm {
+            margin-left: 20px;
+        }
+
+        @include lg {
+            max-width: 382px;
+        }
+
+        @include xl {
+            margin-left: 0;
+        }
+    }
+
+    &__img {
+        width: 70px;
+        margin-right: 19px;
+
+        @include sm {
+            width: auto;
+            margin-right: 0;
+        }
+
+        & img {
+            width: 100%;
+            border-radius: 0px 10px 10px 10px;
+        }
+    } 
+    
+    
+}
+
+.tab-content {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

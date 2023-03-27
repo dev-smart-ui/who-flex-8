@@ -2,6 +2,27 @@
 
 @import "components/notifications";
 @import "components/passwordForm.scss";
+@import "components/coachingPage/main.scss";
+@import "components/coachingPage/offer.scss";
+@import "components/coachingPage/about.scss";
+@import "components/coachingPage/how.scss"; 
+@import "components/coachingPage/saying.scss";
+@import "components/coachingPage/related.scss";
+@import "components/coachingPage/reservation.scss";
+@import "components/coachingPage/footer.scss";
+
+
+@import "components/classicCoaching/coachingAbout.scss";
+@import "components/classicCoaching/tip.scss";
+@import "components/classicCoaching/info.scss";
+@import "components/classicCoaching/invitation.scss";
+@import "components/classicCoaching/footerCoachind.scss";
+
+
+@import "components/classic_coaching.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 @font-face {
 	font-family: 'Arial', sans-serif;
@@ -26,25 +47,30 @@
 	src: url(../fonts/G_ari_bd.TTF);
 	font-weight: 600;
 }
+
 @font-face {
-	font-family: 'passstar';
-	src: url('./../fonts/passStar/passstar.eot');
-	src: url('./../fonts/passStar/passstar.eot') format('embedded-opentype'),
-	url('./../fonts/passStar/passstar.woff') format('woff'),
-	url('./../fonts/passStar/passstar.ttf') format('truetype'),
-	url('./../fonts/passStar/passstar.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Circular';
+  src: url('../fonts/CircularStd-Medium.eot');
+  src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/CircularStd-Medium.woff2') format('woff2'),
+      url('../fonts/CircularStd-Medium.woff') format('woff'),
+      url('../fonts/CircularStd-Medium.ttf') format('truetype'),
+      url('../fonts/CircularStd-Medium.svg#CircularStd-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-body *{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial';
+  background: #F5F5F5;
+  font-family: 'Inter', sans-serif;
   padding: 0;
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 
@@ -74,4 +100,43 @@ body {
   }
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
 
+  @include xl {
+	  padding: 0;
+	}
+
+  &.min {
+    max-width: 1035px;
+  }
+
+}
+
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+  outline: none;
+}

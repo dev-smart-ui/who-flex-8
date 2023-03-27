@@ -1,0 +1,59 @@
+@import "components/var";
+
+.footer-coachind {
+    padding: 21px 0 30px;
+    border-top: 1px solid #000000;
+
+    @include md {
+        padding: 38px 0 76px;
+    }
+}
+
+.footer-list {
+    display: flex;
+    max-width: max-content;
+    margin: auto;
+    width: 100%;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include md {
+                margin-right: 66px;
+            }
+        }
+        & a {
+            font-weight: 500;
+            font-size: 13px;
+            color: #3E3E3E;
+
+            @include sm {
+                font-size: 15px;
+            }
+
+            @include md {
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+    & span {
+        font-weight: 400;
+        display: block;
+        margin-left: 10px;
+        font-size: 11px;
+        color: #000000;
+
+        @include sm {
+            font-size: 19px;
+        }
+    }
+}

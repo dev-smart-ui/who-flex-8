@@ -1,0 +1,388 @@
+@import "components/var";
+
+.info-card {
+    padding: 20px 15px 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    display: flex;
+
+    @include md {
+        padding: 20px 20px 30px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__left {
+        max-width: 61px;
+        width: 100%;
+
+        @include md {
+            max-width: 96px;
+        }
+    }
+
+    &__right {
+        max-width: 803px;
+        width: 100%;
+        margin-left: 15px;
+
+        @include sm {
+            margin-left: 30px;
+        }
+    }
+
+    &__data {
+        font-weight: 400;
+        font-size: 14px;
+        color: #727272;
+        margin-bottom: 10px;
+
+        @include md {
+            margin-bottom: 16px;
+            margin-top: 23px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #545454;
+
+        @include md {
+            font-size: 17px;
+        }
+    }
+
+    &__link {
+        background: #1E1B1E;
+        border-radius: 100px;
+        padding: 7px 0;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 169px;
+        text-align: center;
+        margin-top: 11px;
+        width: 100%;
+
+        &:hover {
+            background: #a3a3a3;
+        }
+
+        @include md {
+            font-size: 16px;
+            margin-top: 23px;
+        }
+
+        & svg {
+            margin-right: 8px;
+        }
+    }
+
+    &_video {
+        display: block;
+    } 
+
+    &-wrap {
+        display: flex;
+    }
+}
+
+.info-profile {
+    &__icon img {
+        width: 100%;
+        border-radius: 0px 10px 10px 10px;
+    }
+
+    & span {
+        font-family: 'Circular';
+        background: #E0C463;
+        display: block;
+        width: 29px;
+        height: 23px;
+        text-align: center;
+        margin: 10px auto 5px;
+        border-radius: 126.087px;
+        font-weight: 500;
+        font-size: 16.6522px;
+        color: #fff;
+        line-height: 24px;
+    }
+
+    &__name {
+        text-align: center;
+        font-weight: 500;
+        font-size: 19px;
+        color: #000000;
+    }
+}
+
+.sample-video {
+    margin: 20px auto 0;
+    max-width: 305px;
+    width: 100%;
+    position: relative;
+
+    @include sm {
+        margin: auto;
+    } 
+
+    @include md {
+        max-width: 366px;
+    } 
+
+    @include lg {
+        max-width: 553px;
+    }   
+
+    &__img {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            border-radius: 10px;
+            top: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            border-radius: 10px;
+            top: 0;
+            background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 45%);
+        }
+
+        & img {
+            border-radius: 10px;
+            width: 100%;
+        }
+    }   
+}
+
+.video-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 12px 30px 26px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__logo {
+        width: 73px;
+
+        @include sm {
+            width: 93px;
+        } 
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        margin: auto;
+        width: 60px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFFFFF;
+
+        @include sm {
+            font-size: 24px;
+        } 
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin: 4px 0 11px;
+
+        @include sm {
+            font-size: 16px;
+        } 
+    }
+
+    &__share {
+        border: 1px solid #FFFFFF;
+        border-radius: 100px;
+        width: 67px;
+        background: transparent;
+        padding: 7px 2px;
+        font-weight: 400;
+        font-size: 12px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        color: #fff;
+        justify-content: center;
+
+        @include sm {
+            width: 93px;
+            font-size: 16px;
+        } 
+
+        &:hover {
+            color: #ccc;
+            border: 1px solid #ccc;
+
+            & svg path{
+                fill: #ccc;
+            }
+        }
+
+        & svg {
+            margin-right: 5px;
+            width: 11px;
+
+            @include sm {
+                width: 14px;
+                margin-right: 3px;
+            } 
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        @include md {
+            margin-left: 21px;
+        }   
+    }
+
+    &__icon {
+        &:hover {
+            & svg path{
+                fill: #ccc;
+            }
+        }
+
+        & svg {
+            width: 18px;
+
+            @include sm {
+                width: 29px;
+            } 
+        }
+    }
+
+}
+
+.share-video {
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    max-width: 90%;
+    width: 100%;
+    padding: 16px 11px 37px 11px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+    @include sm {
+        padding: 16px 19px 37px 19px;
+    } 
+
+    @include lg {
+        max-width: 486px;
+    } 
+
+    &.active {
+        display: block;
+    }
+
+    &__close {
+        display: block;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        margin-left: auto;
+
+        &:hover svg {
+            filter: drop-shadow(0px 1px 2px rgb(0 0 0 / 0.4));
+        }
+    }
+
+    &__title {
+        font-family: 'Circular';
+        font-weight: 700;
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+
+        @include sm {
+            font-size: 20px;
+        } 
+    }
+
+    &__wrap {
+        max-width: 288px;
+        width: 100%;
+        margin: 14px auto 0;
+        display: flex;     
+        justify-content: space-between;   
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
+        width:77px;
+
+        & svg {
+            width: 30px;
+
+            @include sm {
+                width: 38px;
+            } 
+        }
+
+        & span {
+            font-weight: 400;
+            font-size: 12px;
+            color: #474747;
+            display: block;
+
+           @include sm {
+                font-size: 16px;
+            }  
+        }
+    }
+}
+
+#sharemodal {
+    background: transparent;
+    border: none;
+    position: absolute;
+    padding: 0;
+    right: 20px;
+    display: none;
+}

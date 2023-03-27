@@ -1,0 +1,85 @@
+@import "components/var";
+
+.how {
+    padding: 60px 0;
+    display: none;
+
+    @include md {
+        display: block;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 34px;
+        color: #1E1B1E;
+    }
+
+    &-list {
+        display: grid;
+        margin-top: 35px;
+        position: relative;
+        grid-column-gap: 7%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 789px;
+        
+        @include lg {
+            max-width: 100%;
+            grid-column-gap: 4%;
+        }
+
+        &__numb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #DCC060;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: auto;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #1E1B1E;
+            margin: 17px 0 6px;
+
+            @include xl {
+                margin: 17px 0 16px;
+                font-size: 18px;
+            }
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 18px;
+            
+            color: #575757;
+
+            @include xl {
+                line-height: 25px;
+                font-size: 15px;
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            z-index: -1;
+            width: 84%;
+            left: 49px;
+
+            @include md {
+                width: 84%;
+            }
+
+            @include xl {
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

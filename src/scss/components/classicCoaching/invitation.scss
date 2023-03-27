@@ -1,0 +1,137 @@
+@import "components/var";
+
+.invitation {
+    padding-bottom: 60px;
+
+    &-wrap {
+        background: #DDC160;
+        border-radius: 10px;
+        padding: 29px 25px 39px 35px;
+        display: flex;
+        align-items: center;
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+
+        @include md {
+            max-width: 100%;
+        }
+
+        @include lg {
+            padding: 58px 44px 57px 59px ;
+        }
+    }
+
+    &__left {
+        display: none;
+
+        @include md {
+            display: block;
+        }
+
+        & img {
+            width: 154px;
+
+            @include lg {
+                width: 266px;
+            }
+
+        }
+    }
+
+    &__right {
+        
+        width: 100%;
+        
+
+        @include md {
+            margin-left: 38px;
+            max-width: 763px;
+        }
+
+        @include lg {
+            margin-left: 68px;
+        }
+    }
+
+    &__title {
+        font-family: 'Circular';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        color: #FFFFFF;
+
+        & span {
+            display: none;
+
+            @include md {
+               display: block;
+            }
+        }
+
+        @include md {
+            font-size: 29px;
+            line-height: 35px;
+        }
+
+        @include lg {
+            font-size: 36px;
+            line-height: 46px;
+        }
+    }
+
+    &-button {
+        max-width: 280px;
+        margin-top: 13px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include md {
+            max-width: 410px;
+            margin-top: 34px;
+        }
+
+        & button {
+            display: block;
+            max-width: 130px;
+            width: 100%;
+            font-family: 'Circular';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 50px;
+            border: none;
+            padding: 11px 0;
+            cursor: pointer;
+            text-align: center;
+            
+            @include md {
+                max-width: 190px;
+                padding: 18px 0;
+                font-size: 20px;
+            }
+        }
+
+        &__buy {
+            background: #fff;
+            color: #000000;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+
+        &__write {
+            background: #1E1B1E;
+            color: #fff;
+
+            &:hover {
+                background: #fff;
+                color:  #1E1B1E;
+                ;
+            }
+        }
+    }
+}
