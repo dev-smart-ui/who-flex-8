@@ -65,31 +65,38 @@ function video() {
   const aboutSection = document.getElementById("about");
   const videoBlock = document.getElementById('videoBlock');
 
-  window.addEventListener('resize', function() {
-    toggleVideo();
-  }); 
+  if(video) {
+    window.addEventListener('resize', function() {
+      toggleVideo();
+    }); 
+  
+    function toggleVideo() {
+        if(window.innerWidth < 1024) {
+          aboutSection.after(video);
+        } else {
+          videoBlock.append(video);
+        }
+    }toggleVideo();
+  }
 
-  function toggleVideo() {
-      if(window.innerWidth < 1024) {
-        aboutSection.after(video);
-      } else {
-        videoBlock.append(video);
-      }
-  }toggleVideo();
+
 } video();
 
 
 function croppingTitle() {
   const text = document.querySelectorAll(".related-card__title");
 
-  if(window.innerWidth < 577) {
-    text.forEach(item => {
-      let text = item.textContent;
-      text = text.substring(0, 25);
-      console.log(text);
-      item.innerHTML = text+"...";
-    });
+  if(text) {
+    if(window.innerWidth < 577) {
+      text.forEach(item => {
+        let text = item.textContent;
+        text = text.substring(0, 25);
+        console.log(text);
+        item.innerHTML = text+"...";
+      });
+    }
   }
+
 } croppingTitle();
 
 
@@ -99,14 +106,20 @@ const selectSingle = document.querySelector('.price-select');
 const selectSingle_title = selectSingle.querySelector('.price-select__title');
 const selectSingle_labels = selectSingle.querySelectorAll('.price-select__label');
 
+
+if(selectSingle) {
 // Toggle menu
 selectSingle_title.addEventListener('click', () => {
+  openSelect();
+});
+
+function openSelect() {
   if ('active' === selectSingle.getAttribute('data-state')) {
     selectSingle.setAttribute('data-state', '');
   } else {
     selectSingle.setAttribute('data-state', 'active');
   }
-});
+};
 
 // Close when click to option
 for (let i = 0; i < selectSingle_labels.length; i++) {
@@ -116,11 +129,7 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
   });
 }
 
-// Reset title
-const reset = document.querySelector('.reset');
-reset.addEventListener('click', () => {
-  selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
-});
+}
 
 
 

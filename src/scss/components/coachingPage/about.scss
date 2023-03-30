@@ -16,7 +16,7 @@
 
     @include md {
         max-width: 100%;
-        padding: 38px 33px 38px 16px;
+        padding: 38px 33px 39px 16px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -115,6 +115,7 @@
             color: #000000;
             padding-bottom: 11px;
             position: relative;
+            cursor: pointer;
 
             @include xs {
                 font-size: 14px;
@@ -170,10 +171,14 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 13px;
+            margin-bottom: 20px;
 
             @include xs {
                 flex-wrap: nowrap;
+            }
+
+            @include md {
+                font-size: 13px;
             }
         }
 
@@ -232,7 +237,10 @@
     background: #FFFFFF;
     box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.07);
     border-radius: 0px 10px 10px 10px;
-    margin-bottom: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
 
     @include sm {
         display: flex;
@@ -303,7 +311,7 @@
         }
 
         @include lg {
-            max-width: 382px;
+            max-width: 390px;
         }
 
         @include xl {

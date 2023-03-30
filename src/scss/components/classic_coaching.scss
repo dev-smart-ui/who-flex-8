@@ -59,7 +59,7 @@
     }
 
     &-item {
-        margin-bottom: 40px;
+        margin-bottom: 34px;
     }
 
     &-question {
@@ -96,7 +96,7 @@
         text-align: center;
 
         &:not(:last-child) {
-            margin-right: 80px;
+            margin-right: 91px;
         }
     
         & label {
@@ -144,7 +144,7 @@
     background-color: #FFFFFF;
     border: 1px solid #555555;
     border-radius: 8px;
-    padding: 15px 19px;
+    padding: 15px 22px 15px 19px;
     color: #959595;
     font-size: 16px;
     margin-top: 15px;
@@ -343,6 +343,7 @@
  }
  
  .application-btn {
+   font-family: 'Inter';
     background-color: #DDC160;
     box-shadow: 0px 12px 30px rgba(221, 193, 96, 0.12);
     border-radius: 44px;
@@ -356,7 +357,9 @@
     width: 100%;
     cursor: pointer;
     color: #ffffff;
-    margin-top: 33px;
+    max-width: 617px;
+    margin: 38px auto 0;
+    display: block;
  }
  
  @media screen and (max-width: 768px) {
@@ -368,12 +371,19 @@
  
  @media screen and (max-width: 576px) {
     .coaching-application {
-       padding: 30px 0 27px;
+       padding: 27px 0;
     }
- 
+    .coachingApplication {
+      padding-top: 27px;
+  }
     .application-wrapper {
        padding: 16px 15px 26px;
     }
+
+    .application-request img {
+      width: 29px;
+      height: 29px;
+  }
  
     .application-head {
        padding: 16px 0;
