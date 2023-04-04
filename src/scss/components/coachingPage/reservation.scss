@@ -60,6 +60,14 @@
     }
 }
 
+.reservationTabContent {
+    display: none;
+}
+
+.reservationTabContent.active {
+    display: block;
+}
+
 .text-info-res{
     font-weight: 400;
     font-size: 15px;

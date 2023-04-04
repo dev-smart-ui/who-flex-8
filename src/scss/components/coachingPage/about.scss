@@ -109,8 +109,10 @@
         border-bottom: 1px solid #ADADAD;
         margin-bottom: 22px;
         max-width: 93%;
+        justify-content: space-between;
 
         @include sm {
+            justify-content: start;
             max-width: 100%;
         }
 
@@ -156,11 +158,9 @@
 
             &:last-child {
                 padding: 0 11px 11px;
-                margin-left: 45px;
-
                 
-                @include xs {
-                    margin-left: 60px;
+                @include sm {
+                    margin-left: 37px;
                 }
             }
         }
@@ -376,6 +376,7 @@
         max-width: 100%;
         font-size: 16px;
         max-height: 100%;
+        overflow-y: initial;
     }
 
     @include md {

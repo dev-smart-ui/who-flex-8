@@ -104,11 +104,11 @@ function croppingTitle() {
 // select
 
 const selectSingle = document.querySelector('.price-select');
-const selectSingle_title = selectSingle.querySelector('.price-select__title');
-const selectSingle_labels = selectSingle.querySelectorAll('.price-select__label');
-
 
 if(selectSingle) {
+  const selectSingle_title = selectSingle.querySelector('.price-select__title');
+  const selectSingle_labels = selectSingle.querySelectorAll('.price-select__label');
+
 // Toggle menu
 selectSingle_title.addEventListener('click', () => {
   openSelect();
@@ -133,6 +133,23 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 }
 
 
+// reservation
 
+const tabs = document.querySelectorAll(".reservationTabBtn");
+const contents = document.querySelectorAll(".reservationTabContent");
 
+for (let i = 0; i < tabs.length; i++) {
+	tabs[i].addEventListener("click", ( event ) => {
+		let tabsChildren = event.target.parentElement.children;
+		for (let t = 0; t < tabsChildren.length; t++) {
+			tabsChildren[t].classList.remove("active");
+		}
+		tabs[i].classList.add("active");
+		let tabContentChildren = event.target.parentElement.nextElementSibling.children;
+		for (let c = 0; c < tabContentChildren.length; c++) {
+			tabContentChildren[c].classList.remove("active");
+		}
+		contents[i].classList.add("active");
+	});
+}
 
