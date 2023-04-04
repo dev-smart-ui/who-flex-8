@@ -11,14 +11,19 @@
         max-width: 930px;
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+
+
+        @include md {
+            align-items: center;
+        }
 
         &__icon {
             & svg {
                 width: 50px;
 
                 @include md {
-                    width: 108px;
+                    width: 114px;
                 }
             }
         }

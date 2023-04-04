@@ -44,6 +44,7 @@ const swiper = new Swiper('.swiper', {
     },
     993: {
       slidesPerView: 4,
+      pagination:false
     },
   },
 });

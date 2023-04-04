@@ -2,7 +2,11 @@
 
 .related {
     overflow: hidden;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
+
+    @include sm {
+        padding-bottom: 90px;
+    }
 
     @include md {
         padding-bottom: 185px;
@@ -332,4 +336,28 @@
 .main_list_slide_wrap .swiper-slide:hover .bottom_hover { height:auto; padding: 20px; min-width: 100%; max-height: 500px; } 
  }
 
+
+.swiper-pagination {
+    position: static;
+    margin-top: 15px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+        width: 7px;
+        height: 7px;
+        border: 1px solid transparent;
+        background: #000;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+            width: 9px;
+            height: 9px;
+            background: transparent;
+            border: 1px solid #DABF5F;
+        }
+    }
+}
 

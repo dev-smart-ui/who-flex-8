@@ -140,3 +140,12 @@ input, input:hover, input:focus, input:active,
 button, button:hover, button:focus, button:active {
   outline: none;
 }
+
+.btnClose:hover {
+  background: #f0ecec;
+  border-radius: 50%;
+}
+
+.btnClose {
+  text-align: center;
+}

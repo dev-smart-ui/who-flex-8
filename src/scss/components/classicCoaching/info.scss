@@ -16,7 +16,7 @@
     }
 
     &__left {
-        max-width: 61px;
+        max-width: 66px;
         width: 100%;
 
         @include md {
@@ -82,7 +82,14 @@
         }
 
         & svg {
+            width: 14px;
+            height: 14px;
             margin-right: 8px;
+
+            @include sm {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
@@ -97,8 +104,9 @@
 
 .info-profile {
     &__icon img {
+        display: block;
         width: 100%;
-        border-radius: 0px 10px 10px 10px;
+        border-radius: 0 10px 10px 10px;
     }
 
     & span {
@@ -111,16 +119,25 @@
         margin: 10px auto 5px;
         border-radius: 126.087px;
         font-weight: 500;
-        font-size: 16.6522px;
+        font-size:14px;
         color: #fff;
         line-height: 24px;
+
+        
+        @include sm {
+            font-size: 16px;
+        }
     }
 
     &__name {
         text-align: center;
         font-weight: 500;
-        font-size: 19px;
+        font-size: 13px;
         color: #000000;
+
+        @include sm {
+            font-size: 19px;
+        }
     }
 }
 
@@ -302,15 +319,15 @@
     border-radius: 16px;
     max-width: 90%;
     width: 100%;
-    padding: 16px 11px 37px 11px;
+    padding: 12px 11px 21px 11px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
 
-    @include sm {
+    @include md {
         padding: 16px 19px 37px 19px;
-    } 
+    }  
 
     @include lg {
         max-width: 486px;
@@ -326,10 +343,24 @@
         cursor: pointer;
         background: transparent;
         margin-left: auto;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        line-height: 27px;
 
-        &:hover svg {
-            filter: drop-shadow(0px 1px 2px rgb(0 0 0 / 0.4));
+        & svg {
+            width: 11px;
+            height: 11px;
+
+            @include md {
+                width: 13px;
+                height: 13px;
+            } 
         }
+
+        @include md {
+            line-height: 28px;
+        } 
     }
 
     &__title {
@@ -338,6 +369,7 @@
         text-align: center;
         font-size: 16px;
         color: #000000;
+        line-height: 1;
 
         @include sm {
             font-size: 20px;
@@ -347,13 +379,15 @@
     &__wrap {
         max-width: 288px;
         width: 100%;
-        margin: 14px auto 0;
+        margin: 15px auto 0;
         display: flex;     
         justify-content: space-between;   
     }
 
     &__link {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         width:77px;
 
@@ -370,6 +404,7 @@
             font-size: 12px;
             color: #474747;
             display: block;
+            margin-top: 10px;
 
            @include sm {
                 font-size: 16px;
