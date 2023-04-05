@@ -8,8 +8,13 @@
     padding-top: 50px;
 
     &-logo {
-        max-width: 144px;
+       width: 100px;
         display: block;
+
+      @include md {
+         max-width: 144px;
+         width: 100%;
+      }
 
         & svg {
             width: 100%;
@@ -27,7 +32,7 @@
         background-color: #FFFFFF;
         box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.15);
         border-radius: 12px;
-        padding: 34px 25px 28px 15px;
+        padding: 30px 25px 28px 15px;
         margin: auto;
     }
 
@@ -44,6 +49,7 @@
         font-weight: 700;
         font-size: 24px;
         margin-bottom: 10px;
+        letter-spacing: 0;
     }
 
     &-request img {
@@ -54,12 +60,24 @@
     }
 
     &-middle {
-        max-width: 622px;
-        margin: 0 auto 52px;
+      max-width: 621px;
+      margin: 0 16px 53px auto;
     }
 
     &-item {
-        margin-bottom: 34px;
+        margin-bottom: 42px;
+
+        &.mt {
+         margin-bottom: 31px;
+
+         @include sm {
+            margin-bottom: 40px;
+          }
+        }
+
+        @include sm {
+        margin-bottom: 40px;
+      }
     }
 
     &-question {
@@ -73,12 +91,22 @@
     }
 
     &-top {
+      align-items: end;
         justify-content: space-between;
+
+        @include sm {
+         align-items: center;
+      }
     }
 
 
    &-bottom {
-      margin-top: 30px;
+     
+      margin-top: 13px;
+      @include md {
+         margin-top: 30px;
+      }
+ 
    }
    
    &-label {
@@ -91,10 +119,10 @@
       background-color: #FFFFFF;
       border: 1px solid #555555;
       border-radius: 8px;
-      padding: 15px 28px 15px 19px;
+      padding: 15px 40px 13px 19px;
       color: #959595;
       font-size: 16px;
-      margin-top: 15px;
+      margin-top: 12px;
       font-family: inherit;
       margin-bottom: 15px;
    }
@@ -102,11 +130,23 @@
    &-textarea textarea {
       margin-top: 2px;
       @include md {
-         margin-top: 15px;
+         margin-top: 5px;
+         height: 166px;
       }
       &::placeholder {
          color: #959595;
       }
+
+      &::-webkit-scrollbar {
+         width: 4px;
+         border-radius: 0 50px 50px 0;
+         background-color: #a7a7a7;
+     }
+     
+     &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+         background-color: #696969;
+     }
    }
 }
  
@@ -128,7 +168,7 @@
         text-align: center;
 
         &:not(:last-child) {
-            margin-right: 91px;
+            margin-right: 90px;
         }
     
         & label {
@@ -148,8 +188,13 @@
         border-radius: 100px;
         text-align: center;
         line-height: 50px;
-        margin: 0 auto 8px;
+        margin: 0 auto 5px;
         transition: all 0.5s ease;
+
+        @include sm {
+         margin: 0 auto 8px;
+         }
+
 
         &:hover {
          border: 1px solid #dcc060;
@@ -184,19 +229,21 @@
       border-radius: 10px;
       max-width: 90%;
       width: 100%;
-      padding: 19px 24px 30px 23px;
+      padding: 20px 25px 30px 23px;
       position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      height: 430px;
 
       @include xs {
          max-width: 335px;
       }
 
       @include md {
-         padding: 25px 22px 83px 40px;
+         padding: 37px 88px 25px 41px;
          max-width: 611px;
+         height: 485px;
       }
    }
 
@@ -207,9 +254,17 @@
       padding: 0;
       margin-left: auto;
       display: block;
-      height: 25px;
-      width: 25px;
+      height: 26px;
+      width: 26px;
       line-height: 31px;
+      position: absolute;
+      right: 11px;
+      top: 10px;
+
+      @include md {
+         right: 15px;
+         top: 18px;
+      }
 
       & svg {
          width: 13px;
@@ -221,11 +276,12 @@
       font-family: 'Circular';
       font-weight: 700;
       font-size: 20px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
       color: #000000;
 
       @include md {
          font-size: 24px;
+         margin-bottom: 19px;
       }
    }
 
@@ -236,22 +292,34 @@
 }
 
 .someTipsItem {
-   align-items: center;
+   
    display: flex;
 
    &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 27px;
+
+      @include md {
+         align-items: center;
+         margin-bottom: 40px;
+      }
    }
 
    &__icon svg{
-      width: 32px;
-      height: 32px;
+
+      width: 24px;
+      height: 35px;
+
+      @include md {
+         width: 32px;
+         height: 32px;
+      }
+
    }
 
    &__text {
       font-weight: 400;
       font-size: 14px;
-      line-height: 23px;
+      line-height: 20.8px;
       margin-left: 11px;
 
       @include md {
@@ -320,7 +388,7 @@
        cursor: pointer;
        color: #ffffff;
        max-width: 617px;
-       margin: 38px auto 0;
+       margin: 41px auto 0;
        display: block;
        transition: all 0.5s ease;
        
@@ -364,7 +432,7 @@
    }
 
    &-attachment {
-      margin-top: 15px;
+      margin-top: 11px;
    }
 
    &-list {
@@ -433,10 +501,15 @@
  
  .words-count {
     position: absolute;
-    bottom: 26px;
+    bottom: 25px;
     right: 13px;
-    font-size: 16px;
+    font-size: 12px;
     color: #666666;
+
+    @include md {
+      bottom: 30px;
+      font-size: 16px;
+   }
  }
  
  
@@ -464,6 +537,7 @@
  }
  
  .custom-file-input {
+   font-family: 'Arial';
     color: #E0C463;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
@@ -480,8 +554,11 @@
     position: relative;
     display: flex;
     align-items: center;
-    text-decoration: underline;
     justify-content: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include md {
       padding: 14px;
@@ -507,15 +584,19 @@
  }
  
  .application-steps {
-    max-width: 622px;
-    margin: auto;
+    max-width: 612px;
+    margin: auto auto auto 6px;
+
+    @include sm {
+      margin: auto;
+   }
  }
  
  .application-steps__title {
     font-weight: 700;
     font-size: 24px;
     color: #1E1B1E;
-    margin-bottom: 34px;
+    margin-bottom: 36px;
  }
  
  
@@ -528,7 +609,7 @@
  
  @media screen and (max-width: 576px) {
     .coaching-application {
-       padding: 27px 0;
+       padding: 25px 0 31px;
     }
     .coachingApplication {
       padding-top: 27px;
@@ -538,17 +619,18 @@
     }
 
     .application-request img {
-      width: 29px;
-      height: 29px;
+      width: 27px;
+      height: 27px;
   }
  
     .application-head {
-       padding: 16px 0;
-       margin-bottom: 28px;
+      padding: 17px 0 15px;
+      margin-bottom: 26px;
     }
  
     .application-title {
        font-size: 18px;
+       margin-bottom: 3px;
     }
  
     .application-request span {
@@ -557,6 +639,7 @@
  
     .application-question {
        font-size: 16px;
+       margin-bottom: 14px;
 
        &_w {
          max-width: 150px;
@@ -569,8 +652,10 @@
     }
  
     .application-input, .application-textarea textarea {
-       padding: 9px 19px;
-       font-size: 14px;
+      padding: 8px 30px 6px 15px;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 11px;
     }
  
     .radio-male label {
@@ -584,7 +669,7 @@
     }
  
     .application-type .radio-box:not(:last-child) {
-       margin-right: 26px;
+       margin-right: 29px;
     }
  
     .radio-box span {
@@ -594,10 +679,13 @@
   
  
     .application-textarea textarea {
-       min-height: 152px;
+       min-height: 162px;
+       margin-top: 5px;
+       padding: 11px 32px 6px 14px;
+       line-height: 21px;
     }
  
-    .application-textarea textarea, .words-count {
+    .application-textarea textarea {
        font-size: 12px;
     }
  
@@ -610,7 +698,7 @@
     }
  
     .application-middle {
-       margin: 0 auto 30px;
+       margin: 0 auto -12px;
     }
  
     .application-steps__title {
@@ -628,7 +716,7 @@
     }
  
     .application-list__item:not(:last-child) {
-       margin-bottom: 30px;
+       margin-bottom: 25px;
     }
  
     .application-list__num {

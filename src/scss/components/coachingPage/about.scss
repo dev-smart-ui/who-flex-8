@@ -91,16 +91,24 @@
 
     &__name {
         font-weight: 700;
-        font-size: 18px;
+        font-size: 19px;
         color: #000000;
         margin: 9px 0 6px;
+
+        @include md {
+            font-size: 18px;
+        }
     }
 
     &__text {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 15px;
         color: #484848;
         display: block;
+
+        @include md {
+            font-size: 14px;
+        }
     }
 
     &-tab {
@@ -255,8 +263,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-left: 10px;
 
     @include sm {
+        margin-left: 0;
         padding: 24px 28px 30px 21px;
     }
 
