@@ -6,15 +6,19 @@ const confirmNewPassInput = document.getElementById('confirmNewPass');
 const confirmNewPassErrorMessage = document.getElementById('confirmNewPass-error-message');
 const newPassInput = document.getElementById('newPass');
 
-// Open a modal window when the button is clicked 
-document.getElementById('openModal').addEventListener("click", function() {
-    document.getElementById('modalPassword').classList.add('active');
-});
+const openModal = document.getElementById('openModal');
 
-// Close the modal window by clicking on the cross (close button)
-document.getElementById('closeModalPassword').addEventListener("click", function() {
-    document.getElementById('modalPassword').classList.remove('active');
-});
+if(openModal) {
+    // Open a modal window when the button is clicked 
+    openModal.addEventListener("click", function() {
+        document.getElementById('modalPassword').classList.add('active');
+    });
+
+    // Close the modal window by clicking on the cross (close button)
+    document.getElementById('closeModalPassword').addEventListener("click", function() {
+        document.getElementById('modalPassword').classList.remove('active');
+    });
+}
 
 // START Validating fields
 function resetPass(e){

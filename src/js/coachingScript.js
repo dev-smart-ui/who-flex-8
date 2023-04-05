@@ -31,20 +31,20 @@ aboutTabItem.forEach(item => {
 const swiper = new Swiper('.swiper', {
   slidesPerView: 2,
   spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   breakpoints: {
-    640: {
+    320: {
       slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     },
     993: {
       slidesPerView: 4,
-      pagination:false
+      navigation: {
+        nextEl: ".related-slider-button-prev",
+        prevEl: ".related-slider-button-next",
+      },
     },
   },
 });
@@ -72,7 +72,7 @@ function video() {
     }); 
   
     function toggleVideo() {
-        if(window.innerWidth < 1024) {
+        if(window.innerWidth < 992) {
           aboutSection.after(video);
         } else {
           videoBlock.append(video);
@@ -106,11 +106,11 @@ function croppingTitle() {
 const selectSingle = document.querySelector('.price-select');
 
 if(selectSingle) {
-  const selectSingle_title = selectSingle.querySelector('.price-select__title');
-  const selectSingle_labels = selectSingle.querySelectorAll('.price-select__label');
+  const selectSingleTitle = selectSingle.querySelector('.price-select__title');
+  const selectSingleLabels = selectSingle.querySelectorAll('.price-select__label');
 
 // Toggle menu
-selectSingle_title.addEventListener('click', () => {
+selectSingleTitle.addEventListener('click', () => {
   openSelect();
 });
 
@@ -123,9 +123,9 @@ function openSelect() {
 };
 
 // Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
+for (let i = 0; i < selectSingleLabels.length; i++) {
+  selectSingleLabels[i].addEventListener('click', (evt) => {
+    selectSingleTitle.textContent = evt.target.textContent;
     selectSingle.setAttribute('data-state', '');
   });
 }

@@ -76,6 +76,38 @@
         justify-content: space-between;
     }
 
+
+   &-bottom {
+      margin-top: 30px;
+   }
+   
+   &-label {
+      font-size: 18px;
+      font-weight: 500;
+   }
+   
+   &-input, &-textarea textarea {
+      width: 100%;
+      background-color: #FFFFFF;
+      border: 1px solid #555555;
+      border-radius: 8px;
+      padding: 15px 28px 15px 19px;
+      color: #959595;
+      font-size: 16px;
+      margin-top: 15px;
+      font-family: inherit;
+      margin-bottom: 15px;
+   }
+
+   &-textarea textarea {
+      margin-top: 2px;
+      @include md {
+         margin-top: 15px;
+      }
+      &::placeholder {
+         color: #959595;
+      }
+   }
 }
  
 
@@ -238,39 +270,7 @@
     fill: #DCC060!important;
  }
  
- .application-bottom {
-    margin-top: 30px;
- }
- 
- .application-label {
-    font-size: 18px;
-    font-weight: 500;
- }
- 
- .application-input, .application-textarea textarea {
-    width: 100%;
-    background-color: #FFFFFF;
-    border: 1px solid #555555;
-    border-radius: 8px;
-    padding: 15px 22px 15px 19px;
-    color: #959595;
-    font-size: 16px;
-    margin-top: 15px;
-    font-family: inherit;
-    margin-bottom: 15px;
- }
- 
- .application-textarea textarea::placeholder {
-    color: #959595;
- }
 
- .application-textarea textarea {
-   margin-top: 2px;
-   @include md {
-      margin-top: 15px;
-   }
- }
- 
  .radio-male label {
     cursor: pointer;
     position: relative;
@@ -302,32 +302,134 @@
  .radio-male:not(:last-child) {
     margin-right: 13px;
  }
- 
- .application-tips {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    font-size: 18px;
-    text-decoration: underline;
-    color: #000000;
-    cursor: pointer;
-    font-family: inherit;
+
+ .application {
+   &-btn {
+      font-family: 'Inter';
+       background-color: #DDC160;
+       box-shadow: 0px 12px 30px rgba(221, 193, 96, 0.12);
+       border-radius: 44px;
+       padding: 22px 0;
+       font-weight: 700;
+       font-size: 22px;
+       line-height: 100%;
+       text-align: center;
+       letter-spacing: -0.02em;
+       border: none;
+       width: 100%;
+       cursor: pointer;
+       color: #ffffff;
+       max-width: 617px;
+       margin: 38px auto 0;
+       display: block;
+       transition: all 0.5s ease;
+       
+       &:hover {
+         background-color: #000;
+       }
+    }
+
+    &-tips {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-size: 12px;
+      text-decoration: underline;
+      color: #000000;
+      cursor: pointer;
+      font-family: inherit;
+  
+      @include xs {
+        font-size: 14px;
+     }
+  
+      @include md {
+        font-size: 18px;
+     }
+
+      &:hover {
+         text-decoration: none;
+      }
+   }
+
+   &-textarea {
+      position: relative;
+
+      & textarea {
+         resize: none;
+         outline: none;
+         line-height: 162%;
+         letter-spacing: -0.02em;
+      }
+   }
+
+   &-attachment {
+      margin-top: 15px;
+   }
+
+   &-list {
+      display: flex;
+       align-items: center;
+       justify-content: space-between;
+       position: relative;
+       z-index: 1;
+      flex-wrap: wrap;
+   
+      @include lg {
+         flex-wrap: nowrap;
+      }
+   
+      &:before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 50%;
+         background: url(../images/line.png) no-repeat center center;
+         top: -20px;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: -1;
+      }
+   
+      &__item {
+         width: 29%;
+      }
+   
+      &__num {
+         width: 50px;
+         height: 50px;
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 50px;
+         background-color: #DCC060;
+         margin: 0 auto 17px;
+         color: #ffffff;
+         text-align: center;
+         border-radius: 100px;   
+      }
+   
+      &__title {
+         font-weight: 700;
+         color: #1E1B1E;
+         margin-bottom: 16px;
+   
+         @include lg {
+            font-size: 18px;
+         }
+      }
+   
+      &__text {
+         font-size: 15px;
+         line-height: 167%;
+         color: #575757;
+      }
+      
+      
+    }
+    
+   
  }
- 
- .application-tips:hover {
-    text-decoration: none;
- }
- 
- .application-textarea {
-    position: relative;
- }
- 
- .application-textarea textarea {
-    resize: none;
-    outline: none;
-    line-height: 162%;
-    letter-spacing: -0.02em;
- }
+
  
  .words-count {
     position: absolute;
@@ -337,9 +439,6 @@
     color: #666666;
  }
  
- .application-attachment {
-    margin-top: 15px;
- }
  
  .application-attachment__title {
     font-size: 18px;
@@ -419,75 +518,6 @@
     margin-bottom: 34px;
  }
  
- .application-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
- }
- 
- .application-list:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    background: url(../images/new/line.png) no-repeat center center;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
- }
- 
- .application-list__item {
-    width: 29%;
- }
- 
- .application-list__num {
-    width: 50px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 50px;
-    background-color: #DCC060;
-    margin: 0 auto 17px;
-    color: #ffffff;
-    text-align: center;
-    border-radius: 100px;
- }
- 
- .application-list__title {
-    font-weight: 700;
-    font-size: 18px;
-    color: #1E1B1E;
-    margin-bottom: 16px;
- }
- 
- .application-list__text {
-    font-size: 15px;
-    line-height: 167%;
-    color: #575757;
- }
- 
- .application-btn {
-   font-family: 'Inter';
-    background-color: #DDC160;
-    box-shadow: 0px 12px 30px rgba(221, 193, 96, 0.12);
-    border-radius: 44px;
-    padding: 22px 0;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 100%;
-    text-align: center;
-    letter-spacing: -0.02em;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    color: #ffffff;
-    max-width: 617px;
-    margin: 38px auto 0;
-    display: block;
- }
  
  @media screen and (max-width: 768px) {
     .application-list:before {
@@ -561,9 +591,7 @@
        font-size: 14px;
     }
  
-    .application-tips {
-       font-size: 14px;
-    }
+  
  
     .application-textarea textarea {
        min-height: 152px;
@@ -594,14 +622,9 @@
        display: none;
     }
  
-    .application-list {
-       flex-direction: column;
-       align-items: baseline
-    }
- 
     .application-list__item {
        width: 100%;
-       max-width: 240px;
+       max-width: 230px;
     }
  
     .application-list__item:not(:last-child) {

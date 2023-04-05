@@ -17,6 +17,7 @@
         font-weight: 700;
         font-size: 26px;
         margin-bottom: 20px;
+        line-height: 33px;
 
         @include sm {
             margin-bottom: 51px;
@@ -67,6 +68,14 @@
                 left: 24px;
                 font-size: 11px;
             }
+
+            &.mint {
+                background: #3ACFA9;
+            }
+
+            &.orange {
+                background: #FFC016;
+            }
         }
     
         &__wrap {
@@ -87,6 +96,7 @@
         } 
 
         &__title {
+            font-family: 'Circular';
             font-weight: 700;
             line-height: 20px;
             font-size: 15px;
@@ -277,27 +287,55 @@
         overflow: visible;
 
         &-button {
-            height: 50px;
+            display: none;
             border-radius: 50%;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
             z-index: 3;
-            width: 50px;
+            height: 25px;
+            width: 25px;
             background: #343434;
             border: none;
+
+            @include lg {
+                display: block;
+            }
+
+            @include xxl {
+                height: 50px;
+                width: 50px;
+            }
+
+            & svg {
+                width: 14px;
+                height: 22px;
+
+                @include xxl {
+                    width: 29px;
+                    height: 24px;
+                }
+            }
 
             &:hover {
                 background: #DDC160;
             }
 
             &-prev {
-                left: -85px;
+                @include xxl {
+                    left: -85px;
+                }
+
+                left: -10px;
             }
 
             &-next {
-                right: -85px;
+                @include xxl {
+                    right: -85px;
+                }
+
+                right: 2px;
             }
 
         }
@@ -339,7 +377,7 @@
 
 .swiper-pagination {
     position: static;
-    margin-top: 15px;
+    margin-top: 28px;
     line-height: 1;
     display: flex;
     align-items: center;

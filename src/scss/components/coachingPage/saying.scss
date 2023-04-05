@@ -38,10 +38,26 @@
         &__icon {
             background: #343434;
             border-radius: 50%;
-            width: 18px;
-            height: 18px;
+            width: 24px;
+            height: 24px;
             text-align: center;
-            line-height: 15px;
+            line-height: 23px;
+
+            & svg {
+                width: 13px;
+                height: 10px;
+
+                @include md {
+                    width: 10px;
+                    height: 8px;
+                }
+            }
+
+            @include md {
+                line-height: 15px;
+                width: 18px;
+                height: 18px;
+            }
         }
         
         &__text {
