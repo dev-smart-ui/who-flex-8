@@ -21,7 +21,7 @@
 
     &__left {
         background: #fff;
-        padding: 23px 14px;
+        padding: 23px 21px;
         box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         width: 100%;
@@ -75,7 +75,12 @@
         font-weight: 700;
         font-size: 18px;
         color: #000000;
-        margin: 9px 0 6px;
+        margin: 0 0 9px;
+    
+        @include md {
+            margin: 9px 0 6px;
+        }
+
     }
 
     &__text {

@@ -1,7 +1,7 @@
 @import "components/var";
 
 .footer-coachind {
-    padding: 21px 0 30px;
+    padding:27px 0 30px;
     border-top: 1px solid #000000;
 
     @include md {
@@ -20,7 +20,7 @@
             margin-right: 25px;
 
             @include md {
-                margin-right: 66px;
+                margin-right: 76px;
             }
         }
         & a {
@@ -52,9 +52,10 @@
     & span {
         font-weight: 400;
         display: block;
-        margin-left: 10px;
+        margin-left: 13px;
         font-size: 11px;
-        color: #000000;
+        color: #000;
+        letter-spacing: 0.2px;
 
         @include sm {
             font-size: 19px;
