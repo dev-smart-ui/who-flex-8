@@ -68,9 +68,11 @@
         color: #545454;
         height: 117px;
         overflow-y: auto;
+        padding-right: 5px;
 
         @include md {
             height: auto;
+            padding-right: 0;
             font-size: 17px;
             line-height: 26px;
         }
