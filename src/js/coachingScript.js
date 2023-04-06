@@ -39,11 +39,18 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
       },
     },
-    993: {
+    992: {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".related-slider-button-next",
+        prevEl: ".related-slider-button-prev",
+      },
+    },
+    1200: {
       slidesPerView: 4,
       navigation: {
-        nextEl: ".related-slider-button-prev",
-        prevEl: ".related-slider-button-next",
+        nextEl: ".related-slider-button-next",
+        prevEl: ".related-slider-button-prev",
       },
     },
   },
@@ -106,13 +113,14 @@ function croppingTitle() {
 const selectSingle = document.querySelector('.price-select');
 
 if(selectSingle) {
+  const selectBtn = selectSingle.querySelector('.price-select__btn');
   const selectSingleTitle = selectSingle.querySelector('.price-select__title');
   const selectSingleLabels = selectSingle.querySelectorAll('.price-select__label');
 
 // Toggle menu
-selectSingleTitle.addEventListener('click', () => {
-  openSelect();
-});
+selectSingleTitle.addEventListener('click', openSelect);
+
+selectBtn.addEventListener('click', openSelect);
 
 function openSelect() {
   if ('active' === selectSingle.getAttribute('data-state')) {

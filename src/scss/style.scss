@@ -106,10 +106,6 @@ body {
   margin: auto;
   padding: 0 20px;
 
-  @include lg {
-	  padding: 0 10px;
-	}
-
   @include xxl {
 	  padding: 0;
 	}
