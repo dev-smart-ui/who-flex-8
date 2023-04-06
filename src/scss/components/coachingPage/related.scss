@@ -294,7 +294,7 @@
             display: none;
             border-radius: 50%;
             position: absolute;
-            top: 50%;
+            top: 42%;
             transform: translateY(-50%);
             cursor: pointer;
             z-index: 3;
@@ -327,19 +327,29 @@
             }
 
             &-prev {
+                left: -9px;
+
+                @include xl {
+                    left: -20px;
+                }
                 @include xxl {
                     left: -85px;
                 }
 
-                left: -10px;
+               
             }
 
             &-next {
+                right: -6px;
+                @include xl {
+                    right: -20px;
+                }
+
                 @include xxl {
                     right: -85px;
                 }
 
-                right: 2px;
+                
             }
 
         }
