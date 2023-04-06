@@ -67,11 +67,7 @@
               content: none;
             }
           }
-          &:nth-child(3){
-            &::after{
-              content: none;
-            }
-          }
+
           &::after{
             @include xs{
               position: absolute;
@@ -89,7 +85,9 @@
         }
         a{
           color: #E9E9E9;
+          font-size: 12.9px;
           @include md{
+            font-size: 13px;
             color: #ffffff;
           }
         }
@@ -109,14 +107,6 @@
         display: none;
         @include md{
           display: block;
-        }
-      }
-      .footer__wrap-list{
-        &:nth-child(2){
-          display: none;
-          @include md{
-            display: block;
-          }
         }
       }
       .footer__copyright{
