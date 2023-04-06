@@ -110,34 +110,40 @@ function croppingTitle() {
 
 // select
 
-const selectSingle = document.querySelector('.price-select');
+const selectSingle = document.querySelectorAll('.price-select');
 
 if(selectSingle) {
-  const selectBtn = selectSingle.querySelector('.price-select__btn');
-  const selectSingleTitle = selectSingle.querySelector('.price-select__title');
-  const selectSingleLabels = selectSingle.querySelectorAll('.price-select__label');
+  selectSingle.forEach(item => {
 
-// Toggle menu
-selectSingleTitle.addEventListener('click', openSelect);
-
-selectBtn.addEventListener('click', openSelect);
-
-function openSelect() {
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-  } else {
-    selectSingle.setAttribute('data-state', 'active');
+    const selectBtn = item.querySelector('.price-select__btn');
+    const selectSingleTitle = item.querySelector('.price-select__title');
+    const selectSingleLabels = item.querySelectorAll('.price-select__label');
+  
+  // Toggle menu
+  selectSingleTitle.addEventListener('click', openSelect);
+  
+  selectBtn.addEventListener('click', openSelect);
+  
+  function openSelect() {
+    if ('active' === item.getAttribute('data-state')) {
+      item.setAttribute('data-state', '');
+    } else {
+      item.setAttribute('data-state', 'active');
+    }
+  };
+  
+  // Close when click to option
+  for (let i = 0; i < selectSingleLabels.length; i++) {
+    selectSingleLabels[i].addEventListener('click', (evt) => {
+      selectSingleTitle.textContent = evt.target.textContent;
+      item.setAttribute('data-state', '');
+    });
   }
-};
+  
+   
+});
 
-// Close when click to option
-for (let i = 0; i < selectSingleLabels.length; i++) {
-  selectSingleLabels[i].addEventListener('click', (evt) => {
-    selectSingleTitle.textContent = evt.target.textContent;
-    selectSingle.setAttribute('data-state', '');
-  });
-}
-
+ 
 }
 
 
