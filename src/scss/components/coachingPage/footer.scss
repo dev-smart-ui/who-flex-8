@@ -40,13 +40,14 @@
         }
       }
       .footer__list{
-        margin: 0 auto;
+        margin: 0 auto 8px;
         justify-content: center;
         max-width: 400px;
         @include md{
           max-width: none;
           justify-content: flex-start;
           gap: 20px;
+          margin: 0 auto ;
         }
         li{
           width: auto;
