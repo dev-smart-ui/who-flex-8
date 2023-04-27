@@ -569,6 +569,11 @@
       font-size: 17px;
    }
 
+   &.active {
+      justify-content: flex-start;
+      border: 1px solid #E0C463;
+   }
+
     & svg {
       width: 14px;
       height: 14px;
@@ -586,6 +591,10 @@
  .custom-file-input:active {
     outline: 0;
  }
+ 
+.custom-file__delete:hover svg path{
+   fill:#000   
+}
  
  .application-steps {
     max-width: 612px;
