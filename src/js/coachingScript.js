@@ -176,3 +176,31 @@ function reservationBtn() {
       })
   });
 }reservationBtn();
+
+
+const openBtn = document.querySelector('.openBuyCard');
+const closeBtn = document.querySelector('.closeBuyCard');
+const buyCard = document.querySelector('#buyCard');
+
+if(buyCard) {
+  function openBuyCard() {
+    buyCard.classList.add('active');
+  }
+  
+  function closeBuyCard() {
+    buyCard.classList.remove('active');
+  }
+  
+  
+  openBtn.addEventListener('click', (event) => {
+    openBuyCard();
+    event.stopPropagation();
+  });
+  closeBtn.addEventListener('click', closeBuyCard);
+  document.addEventListener('click', function(event) {
+    if (event.target !== buyCard && !buyCard.contains(event.target)) {
+      closeBuyCard();
+    }
+  });
+  
+}

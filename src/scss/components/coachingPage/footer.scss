@@ -436,3 +436,59 @@
     }
   }
 }
+
+.buyCard {
+  background: #FFFFFF;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px 20px 10px 10px;
+  position: fixed;
+  bottom: -100%;
+  z-index: 31;
+  left: 0;
+  transition: .4s;
+  width: 100%;
+
+  &.active {
+    bottom: 0;
+  }
+
+  & .reservation {
+    max-width: 100%;
+  }
+
+  &__top {
+    position: relative;
+    padding: 27px 20px 10px;
+    border-bottom: 1px solid #6666;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      content: "";
+      height: 4px;
+      width: 40px;
+      border-radius: 10px;
+      background-color: #e9eaee;
+    }
+
+    & span {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__cancel {
+    color: #e0c463;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 45px;
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    padding: 0;
+  }
+}
