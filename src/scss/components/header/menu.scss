@@ -1,5 +1,5 @@
-@import "var";
-@import "./nav";
+@import "../var";
+@import "./nav.scss";
 @import "./burger-menu";
 
 
@@ -448,7 +448,7 @@ body{
   display: inline-block;
   width: 22px;
   height: 20px;
-  background: url(./../images/m_search_icon.png) no-repeat;
+  background: url(./../images/header/m_search_icon.png) no-repeat;
   background-size: contain;
   cursor: pointer;
 }
@@ -472,6 +472,7 @@ body{
     letter-spacing: -0.02em;
     color: #333333;
     margin-left: 22px;
+    border: none;
   }
 }
 .notification-btn{

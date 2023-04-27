@@ -1,11 +1,11 @@
 @import "components/var";
 
 .coaching-about {
-    padding: 33px 0 40px;
+    padding: 100px 0 40px;
     background: linear-gradient(282.93deg, #EAF4FD 0.67%, #FFFDF8 100%);
 
     @include md {
-        padding: 50px 0 0;
+        padding: 130px 0 0;
         background: transparent;
     }
     

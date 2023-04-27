@@ -121,3 +121,8 @@ function comparisonPassword() {
         }
     })
 };
+
+
+@@include('components/scriptHeader.js');
+@@include('components/swiper-min.js');
+@@include('components/slider-init.js');
