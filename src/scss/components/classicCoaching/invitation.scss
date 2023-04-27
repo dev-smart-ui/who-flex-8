@@ -1,6 +1,7 @@
 @import "components/var";
 
 .invitation {
+    padding-top: 40px;
     padding-bottom: 25px;
 
     @include md {
@@ -61,9 +62,8 @@
     }
 
     &__title {
-        font-family: 'Circular';
         font-weight: 700;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 40px;
         color: #FFFFFF;
         letter-spacing: 0.3px;
@@ -82,7 +82,7 @@
         }
 
         @include lg {
-            font-size: 36px;
+            font-size: 31px;
             line-height: 46px;
         }
     }
@@ -103,13 +103,12 @@
             display: block;
             max-width: 130px;
             width: 100%;
-            font-family: 'Circular';
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
             border-radius: 50px;
             border: none;
-            padding: 11px 0;
+            padding: 13px 0;
             cursor: pointer;
             text-align: center;
             
@@ -123,20 +122,21 @@
         &__buy {
             background: #fff;
             color: #000000;
+            transition: .3s;
 
             &:hover {
-                background: #000;
-                color: #fff;
+                background: #cbcbcb;
             }
         }
 
         &__write {
+            transition: .3s;
             background: #1E1B1E;
             color: #fff;
 
             &:hover {
-                background: #fff;
-                color:  #1E1B1E;
+                background: grey;
+                color:  #fff;
                 ;
             }
         }

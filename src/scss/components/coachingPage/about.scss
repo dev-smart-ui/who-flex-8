@@ -232,11 +232,13 @@
         }
 
         &__text {
+            font-family: 'arial', sans-serif;
             font-weight: 400;
             font-size: 17px;
-            line-height: 26px;
+            line-height: 1.6;
             color: #404040;
             max-height: 230px;
+            overflow-x: hidden;
             overflow-y: auto;
             padding-right: 15px;
             max-width: 96%;
@@ -244,12 +246,32 @@
             @include sm {
                 max-width: 100%;
                 font-size: 16px;
-                max-height: 100%;
+                max-height: 130px;
             }
 
             @include md {
                 padding-right: 0px;
             }
+
+            &::-webkit-scrollbar {
+                cursor: pointer;
+                width: 5px;
+
+                @include md {
+                   width: 10px;
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #EDEDED;
+               
+                border-radius: 100px;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background: #CBCBCB;
+                border-radius: 100px;
+              }
         }
     }
     

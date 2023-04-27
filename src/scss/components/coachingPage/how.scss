@@ -9,9 +9,11 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 34px;
-        color: #1E1B1E;
+        font-size: 25px;
+        line-height: 1.2em;
+        color: #111111;
+        position: relative;
+        font-family: arial,sans-serif;
     }
 
     &-list {
@@ -56,8 +58,7 @@
             font-weight: 400;
             font-size: 11px;
             line-height: 18px;
-            
-            color: #575757;
+            color: #333333;
 
             @include xl {
                 line-height: 25px;

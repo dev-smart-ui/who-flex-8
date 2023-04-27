@@ -1,13 +1,14 @@
 @import "components/var";
 
 .tip {
-    padding: 44px 0 ;
+    display: none;
 
     &_padding {
         padding: 50px 0 30px;
     }
 
     @include md {
+        display: block;
         padding: 47px 0;
     }
 
@@ -34,10 +35,10 @@
 
         &__title {
             font-family: 'Circular';
-            font-weight: 700;
+            font-weight: 400;
             font-size: 20px;
             line-height: 28px;
-            color: #343434; 
+            color: #000; 
             max-width: 780px;
             width: 100%;
             margin-left: 13px;

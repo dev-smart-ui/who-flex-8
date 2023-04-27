@@ -100,6 +100,10 @@
         cursor: pointer;
         line-height: 38px;
         padding: 0;
+
+        &.active {
+            background-color: #DDC160;
+        }
        
 
         &:hover{
@@ -197,7 +201,7 @@
         &_delivery {
             font-size: 13px;
             @include md {
-                font-size: 18px;
+                font-size: 19px;
             }
         }
     }
@@ -254,7 +258,7 @@
 
     @include md {
         line-height: 26px;
-        font-size: 28px;
+        font-size: 36px;
     }
 }
 
@@ -298,10 +302,7 @@
         text-align: center;
         color: #FFFFFF;
         border-radius: 100px;
-
-        &:hover {
-            background: #000;
-        }
+        border: 1px solid transparent;
     
         &:not(:last-child) {
             margin-bottom: 16px;
@@ -310,10 +311,20 @@
 
     &__buy {
         background: #343434;
+        
+        &:hover {
+            border: 1px solid #343434;
+            background: #ffffff;
+            color: #343434;
+        }
     }
 
     &__add {
         background: #DDC160;
+
+        &:hover {
+            background: grey;
+        }
     }
 }
 
@@ -322,24 +333,6 @@
         margin: 22px 0 14px;
         font-weight: 500;
         font-size: 16px;
-    }
-
-    & .price-res {
-        &::after {
-            background-color: transparent;
-            border: 1px solid #747474;
-            border-radius: 4px;
-            width: 12.4px;
-            height: 12.4px;
-            top: 18px;
-        }
-
-        &.active {
-            &::after {
-                background-color: #343434;
-                border: none;
-            }
-        }
     }
 
     & .new-price {
@@ -431,10 +424,7 @@
   }
   .price-select__input {
     display: none;
-  
-    &:checked + label {
-      background-color: #dedede;
-    }
+
     &:disabled + label {
       opacity: 0.6;
       pointer-events: none;
@@ -459,7 +449,8 @@
     }
   
     &:hover {
-        background: #DDC160;
-        color: #ffffff;
+        background: grey;
+        color: #414141;
+    
     }
   }

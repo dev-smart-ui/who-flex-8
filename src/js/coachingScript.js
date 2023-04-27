@@ -167,3 +167,12 @@ for (let i = 0; i < tabs.length; i++) {
 	});
 }
 
+
+function reservationBtn() {
+  const reservationBtn = document.querySelectorAll('.wrap-top-res button') 
+  reservationBtn.forEach(btn => {
+      btn.addEventListener('click', function(){
+          btn.classList.toggle('active');
+      })
+  });
+}reservationBtn();

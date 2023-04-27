@@ -59,14 +59,18 @@
             margin-bottom: 16px;
             margin-top: 23px;
         }
+
+        &_video {
+            margin-top: 20px;
+        }
     }
 
     &__text {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
-        color: #545454;
-        height: 117px;
+        color: #727272;
+        height: 96px;
         overflow-y: auto;
         padding-right: 5px;
 
@@ -84,7 +88,7 @@
         border-radius: 100px;
         padding: 8px 0;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 11px;
         color: #fff;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -443,8 +447,10 @@
         }
 
         @include md {
-            margin-bottom: 12px;
-            line-height: 28px;
+            margin-bottom: 8px;
+            line-height: 40px;
+            width: 35px;
+            height: 35px;
         } 
     }
 
@@ -493,6 +499,21 @@
             @include sm {
                 width: 38px;
             } 
+
+            &:hover {
+                fill: #ddc160;
+
+                & circle {
+                    stroke: #ddc160;
+                }
+
+                & path {
+                    fill: #fff;
+                }
+            }
+
+            
+
         }
 
         & span {

@@ -9,14 +9,13 @@
     }
 
     &__title {
-        font-family: 'Circular';
+        font-family: 'arial', sans-serif;
         margin-bottom: 27px;
-        color: #000000;
-        font-size: 26px;
-        line-height: 36px;
+        font-size: 25px;
+        line-height: 1.2em;
+        color: #111111;
 
         @include sm {
-            font-size: 34px;
             margin-bottom: 19px;
         }
     }
@@ -65,7 +64,7 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 28px;
-            color: #404040;
+            color: #333333;
         }
 
         &__wrap {
