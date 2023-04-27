@@ -1,35 +1,5 @@
 @import "components/var";
 
-@import "components/notifications";
-@import "components/passwordForm.scss";
-@import "components/coachingPage/main.scss";
-@import "components/coachingPage/offer.scss";
-@import "components/coachingPage/about.scss";
-@import "components/coachingPage/how.scss"; 
-@import "components/coachingPage/saying.scss";
-@import "components/coachingPage/related.scss";
-@import "components/coachingPage/reservation.scss";
-@import "components/coachingPage/footer.scss";
-
-
-@import "components/classicCoaching/coachingAbout.scss";
-@import "components/classicCoaching/tip.scss";
-@import "components/classicCoaching/info.scss";
-@import "components/classicCoaching/invitation.scss";
-@import "components/classicCoaching/footerCoachind.scss";
-
-
-@import "components/classic_coaching.scss";
-
-
-@import "components/header/menu";
-@import "components/header/notification";
-@import "components/header/search-history";
-@import "components/header/footer";
-@import "components/header/header-logo";
-@import "components/header/swiper-bundle.css";
-
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 @font-face {
@@ -68,6 +38,38 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+@import "components/notifications";
+@import "components/passwordForm.scss";
+@import "components/coachingPage/main.scss";
+@import "components/coachingPage/offer.scss";
+@import "components/coachingPage/about.scss";
+@import "components/coachingPage/how.scss"; 
+@import "components/coachingPage/saying.scss";
+@import "components/coachingPage/related.scss";
+@import "components/coachingPage/reservation.scss";
+@import "components/coachingPage/footer.scss";
+
+
+@import "components/classicCoaching/coachingAbout.scss";
+@import "components/classicCoaching/tip.scss";
+@import "components/classicCoaching/info.scss";
+@import "components/classicCoaching/invitation.scss";
+@import "components/classicCoaching/footerCoachind.scss";
+
+
+@import "components/classic_coaching.scss";
+
+
+@import "components/header/menu";
+@import "components/header/notification";
+@import "components/header/search-history";
+@import "components/header/footer";
+@import "components/header/header-logo";
+@import "components/header/swiper-bundle.css";
+
+
 
 * {
   box-sizing: border-box;
