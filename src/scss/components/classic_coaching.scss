@@ -239,17 +239,21 @@
    &__card {
       background: #FFFFFF;
       border-radius: 10px;
-      max-width: 90%;
+      max-width: 100%;
       width: 100%;
       padding: 20px 25px 30px 23px;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 430px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: auto;
 
-      @include xs {
+      @include sm {
          max-width: 335px;
+         position: relative;
+         top: 50%;
+         left: 50%;
+         bottom: auto;
+         transform: translate(-50%, -50%);
       }
 
       @include md {
