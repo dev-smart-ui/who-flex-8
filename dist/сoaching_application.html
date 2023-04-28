@@ -308,13 +308,25 @@ What do you want [Instructor] to know about your request for advice?"></textarea
 
 		function addFile() {						
 			inputFile.addEventListener('change', function(file){
-				textBlock.querySelector("span").innerText = file.target.files[0].name;
+				let inputText = textBlock.querySelector("span");
+				inputText.innerText = file.target.files[0].name;
 				iconFile.style.display = "none";
 				iconPdf.style.display = "block";
 				deleteBtn.style.display = "block";
 				iconCheck.style.display = "block";
 				attachIcon.style.display = "block";
 				textBlock.classList.add('active');
+
+				let text = inputText.innerText;
+				if (text.length > 20) {
+					if (window.innerWidth > 769) {
+						text = text.substring(0, 40) + "...";
+						inputText.innerText = text;
+					} else {
+						text = text.substring(0, 20) + "...";
+						inputText.innerText = text;
+					}
+				}
 			})
 		}addFile();
 	
