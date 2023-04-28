@@ -197,10 +197,6 @@ if(buyCard) {
     event.stopPropagation();
   });
   closeBtn.addEventListener('click', closeBuyCard);
-  // document.addEventListener('click', function(event) {
-  //   if (event.target !== buyCard && !buyCard.contains(event.target)) {
-  //     closeBuyCard();
-  //   }
-  // });
+  document.querySelector('.buyCard-close').addEventListener('click', closeBuyCard);
   
 }

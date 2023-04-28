@@ -495,4 +495,17 @@
     bottom: 11px;
     padding: 0;
   }
+
+  &-close {
+    display: none;
+    width: 100%;
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+  }
 }
+
+.buyCard.active .buyCard-close{
+  display: block;
+} 
