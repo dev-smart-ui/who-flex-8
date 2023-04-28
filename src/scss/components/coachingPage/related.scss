@@ -14,14 +14,18 @@
 
     &__title {
         font-family: 'Circular';
-        font-weight: 700;
-        font-size: 26px;
+        font-size: 18px;
+        line-height: 1.2em;
+        color: #111111;
         margin-bottom: 20px;
-        line-height: 33px;
 
         @include sm {
             margin-bottom: 51px;
-            font-size: 34px;
+            font-size: 23px;
+        }
+
+        @include lg {
+            font-size: 25px;
         }
     }
 

@@ -13,7 +13,15 @@
         line-height: 1.2em;
         color: #111111;
         position: relative;
-        font-family: arial,sans-serif;
+        font-family: 'Circular';
+
+        @include sm {
+            font-size: 23px;
+        }
+
+        @include lg {
+            font-size: 25px;
+        }
     }
 
     &-list {
