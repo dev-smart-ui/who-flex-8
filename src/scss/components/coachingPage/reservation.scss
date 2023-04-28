@@ -414,7 +414,7 @@
 
   .price-select__content {
     position: absolute;
-    top: 35px;
+    top: 31px;
     transform: translateX(-50%);
     left: 50%;
     display: flex;
@@ -427,6 +427,10 @@
     opacity: 0;
     z-index: -2;
     overflow: hidden;
+
+    @include md {
+        top: 35px;
+    }
   }
   .price-select__input {
     display: none;
