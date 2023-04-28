@@ -583,7 +583,19 @@
 
    &.active {
       justify-content: flex-start;
-      border: 1px solid #E0C463;
+      background-color: #eff3fe;
+      border: 1px solid #276ef1;
+
+      &:hover {
+         text-decoration: none;
+      }
+
+      & span {
+         color: #111;
+         font-weight: 400;
+
+
+      }
    }
 
     & svg {
@@ -606,6 +618,23 @@
  
 .custom-file__delete:hover svg path{
    fill:#000   
+}
+
+.custom-file__iconsfile {
+   bottom: -25px;
+
+   &:hover {
+      & svg {
+         path {
+            stroke: #000;
+         } 
+      } 
+   }
+
+   @include md {
+      bottom: -40px;
+   }
+   
 }
  
  .application-steps {

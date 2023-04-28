@@ -447,6 +447,10 @@
   left: 0;
   transition: .4s;
   width: 100%;
+  
+  @include sm {
+    display: none;
+  }
 
   &.active {
     bottom: 0;
