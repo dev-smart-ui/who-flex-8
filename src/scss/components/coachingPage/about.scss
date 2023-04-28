@@ -260,10 +260,6 @@
             &::-webkit-scrollbar {
                 cursor: pointer;
                 width: 5px;
-
-                @include md {
-                   width: 10px;
-                }
             }
 
             &::-webkit-scrollbar-track {
@@ -273,7 +269,7 @@
               }
 
               &::-webkit-scrollbar-thumb {
-                background: #CBCBCB;
+                background: #a2a2a2;
                 border-radius: 100px;
               }
         }
