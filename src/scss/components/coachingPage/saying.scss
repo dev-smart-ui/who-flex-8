@@ -11,12 +11,16 @@
     &__title {
         font-family: 'arial', sans-serif;
         margin-bottom: 27px;
-        font-size: 25px;
+        font-size: 18px;
         line-height: 1.2em;
         color: #111111;
 
         @include sm {
-            margin-bottom: 19px;
+            font-size: 23px;
+        }
+
+        @include lg {
+            font-size: 25px;
         }
     }
 

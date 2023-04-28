@@ -308,7 +308,11 @@ What do you want [Instructor] to know about your request for advice?"></textarea
 		const fieldType = document.querySelectorAll('.field-type'); 
 
 		fieldType.forEach(input => {
-			input.addEventListener('input', function(){
+			input.addEventListener('focus', function(){
+				input.style.border = "1px solid #dcc060";
+					input.style.color = "#333333";
+			})
+			input.addEventListener('blur', function(){
 				if(input.value === "") {
 					input.style.border = "1px solid #555";
 					input.style.color = "#959595";

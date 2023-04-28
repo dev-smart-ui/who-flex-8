@@ -3,10 +3,12 @@
 .coaching-about {
     padding: 100px 0 40px;
     background: linear-gradient(282.93deg, #EAF4FD 0.67%, #FFFDF8 100%);
+    margin-bottom: 50px;
 
     @include md {
-        padding: 130px 0 0;
+        padding: 97px 0 0;
         background: transparent;
+        margin-bottom: 0;
     }
     
     &__wrap {
@@ -117,12 +119,11 @@
           }
 
           &::-webkit-scrollbar-track {
-            background: #CBD9E6;
-           
+            background: #FFFFFF;
           }
 
           &::-webkit-scrollbar-thumb {
-            background: #FFFFFF;
+            background: #CBD9E6;
           }
     }
 }

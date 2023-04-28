@@ -5,7 +5,7 @@
 }
  
  .coachingApplication {
-    padding-top: 30px;
+    padding-top: 60px;
 
     &-logo {
         display: none;
@@ -14,6 +14,14 @@
          display: block;
          max-width: 127px;
          width: 100%;
+         position: absolute;
+         left: 40px;
+         top: 25px;
+      }
+
+      @include lg {
+         top: 30px;
+         left: 64px;
       }
 
         & svg {
@@ -23,7 +31,7 @@
  }
 
  .coaching-application {
-    padding: 45px 0 40px;
+    padding: 45px 0 30px;
  }
  
  .application{ 
@@ -704,7 +712,7 @@
     }
  
     .application-textarea textarea {
-       font-size: 14px;
+       font-size: 13px;
     }
  
     .application-attachment {
