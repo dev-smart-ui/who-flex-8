@@ -36,7 +36,6 @@
   
   .notifications-list {
     display: flex;
-    font-family: 'Arial';
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
@@ -67,7 +66,7 @@
   }
   
   .notifications-card-title span, .notifications-item-name span {
-    font-family: 'Arial';
+    font-family: $mainFont;
     font-weight: 400;
     font-size: 15px;
     margin-left: 12px;

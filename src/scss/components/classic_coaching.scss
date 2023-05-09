@@ -131,7 +131,7 @@
       color: #959595;
       font-size: 16px;
       margin-top: 12px;
-      font-family: inherit;
+      font-family: $mainFont;
       margin-bottom: 15px;
    }
 
@@ -289,7 +289,6 @@
    }
 
    &__title {
-      font-family: 'Circular';
       font-weight: 700;
       font-size: 20px;
       margin-bottom: 28px;
@@ -389,7 +388,7 @@
 
  .application {
    &-btn {
-      font-family: 'Inter';
+      font-family:$mainFont;
        background-color: #DDC160;
        box-shadow: 0px 12px 30px rgba(221, 193, 96, 0.12);
        border-radius: 44px;
@@ -421,7 +420,6 @@
       text-decoration: underline;
       color: #000000;
       cursor: pointer;
-      font-family: inherit;
   
       @include xs {
         font-size: 14px;
@@ -553,7 +551,7 @@
  }
  
  .custom-file-input {
-   font-family: 'Arial';
+   font-family: $mainFont;
     color: #E0C463;
     border: 1px solid #DDDDDD;
     border-radius: 10px;

@@ -19,7 +19,6 @@
       padding: 35px 0 65px;
       border-radius: 0;
       max-width: none;
-      font-family: $secondFont !important;
       @include sm{
         padding: 35px 0 38px;
       }
@@ -194,7 +193,6 @@
           border-radius: 5px;
           width: 208px;
           height: 56px;
-          font-family: $secondFont;
         }
         p{
           font-weight: 400;
@@ -424,7 +422,7 @@
     width: 100%;
     border: none;
     padding: 15.4px 0;
-    font-family: 'Inter';
+    font-family: $mainFont;
     font-weight: 600;
     font-size: 16px;
     text-align: center;

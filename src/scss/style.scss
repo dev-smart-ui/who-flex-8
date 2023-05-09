@@ -1,7 +1,5 @@
 @import "components/var";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
 @font-face {
 	font-family: 'Arial', sans-serif;
 	src: url(../fonts/Arialn.ttf);
@@ -25,20 +23,6 @@
 	src: url(../fonts/G_ari_bd.TTF);
 	font-weight: 600;
 }
-
-@font-face {
-  font-family: 'Circular';
-  src: url('../fonts/CircularStd-Medium.eot');
-  src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/CircularStd-Medium.woff2') format('woff2'),
-      url('../fonts/CircularStd-Medium.woff') format('woff'),
-      url('../fonts/CircularStd-Medium.ttf') format('truetype'),
-      url('../fonts/CircularStd-Medium.svg#CircularStd-Medium') format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 
 @import "components/notifications";
 @import "components/passwordForm.scss";
@@ -70,14 +54,13 @@
 @import "components/header/swiper-bundle.css";
 
 
-
 * {
   box-sizing: border-box;
 }
 
 body {
   background: #F5F5F5;
-  font-family: 'Inter', sans-serif;
+  font-family: $mainFont;
   padding: 0;
   margin: 0;
   letter-spacing: -0.02em;

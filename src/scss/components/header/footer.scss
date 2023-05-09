@@ -17,7 +17,6 @@
     padding: 35px 0 38px;
     border-radius: 0;
     max-width: none;
-    font-family: $secondFont !important;
     @include md{
       padding: 58px 0 37px;
     }
@@ -168,7 +167,6 @@
         border-radius: 5px;
         width: 208px;
         height: 56px;
-        font-family: $secondFont;
       }
       p{
         font-weight: 400;

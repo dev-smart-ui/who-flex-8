@@ -16,7 +16,7 @@
         border-bottom: 1px solid #000000;
 
         & button {
-            font-family: 'Inter';
+            font-family: $mainFont;
             font-weight: 500;
             font-size: 17px;
             color: #343434;
@@ -296,7 +296,7 @@
     }
 
     & button {
-        font-family: 'Inter';
+        font-family: $mainFont;
         width: 100%;
         border: none;
         cursor: pointer;

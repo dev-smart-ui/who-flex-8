@@ -206,8 +206,6 @@
             font-size: 13px;
             color: #5E5E5E;
             margin-bottom: 10px;
-            font-family: 'Inter';
-
             @include xs {
                 margin-bottom: 0;
             }
@@ -232,7 +230,6 @@
         }
 
         &__text {
-            font-family: 'arial', sans-serif;
             font-weight: 400;
             font-size: 17px;
             line-height: 1.6;
@@ -298,7 +295,6 @@
 
     &__left {
         & span {
-            font-family: 'Circular';
             background: #E0C463;
             display: block;
             width: 29px;
