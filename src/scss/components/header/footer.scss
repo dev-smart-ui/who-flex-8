@@ -14,7 +14,7 @@
   }
   &-main{
     background: #000000;
-    padding: 35px 0 38px;
+    padding: 35px 0 110px;
     border-radius: 0;
     max-width: none;
     @include md{
@@ -62,15 +62,13 @@
           }
         }
         &::after{
-          @include xs{
-            position: absolute;
+          position: absolute;
             content: "";
             background: #737373;
             width: 1px;
             height: 14px;
             top: 4px;
             right: -10px;
-          }
           @include md{
             content: none;
           }
@@ -107,15 +105,17 @@
           display: block;
         }
       }
-    }
-    .footer__copyright{
-      text-align: center;
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 16px;
-      margin-top: 7px;
-      @include md{
-        text-align: left;
+
+      &.mob {
+        @include md{
+          display: none;
+        }
+      }
+      &.pc {
+        display: none;
+        @include md{
+          display: block;
+        }
       }
     }
     .footer__bottom{

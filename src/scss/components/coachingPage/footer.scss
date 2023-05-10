@@ -84,8 +84,8 @@
           }
         }
         a{
-          color: #E9E9E9;
-          font-size: 12.9px;
+          color: #cccccc;
+          font-size: 13px;
           @include md{
             font-size: 13px;
             color: #ffffff;
@@ -114,12 +114,12 @@
       }
       .footer__copyright{
         text-align: center;
-        font-weight: 700;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 16px;
         margin-top: 7px;
         @include md{
           text-align: left;
+          font-weight: 700;
         }
       }
       .footer__bottom{

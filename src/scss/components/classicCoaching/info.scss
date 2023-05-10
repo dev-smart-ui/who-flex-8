@@ -70,7 +70,7 @@
         font-size: 14px;
         line-height: 24px;
         color: #404040;
-        height: 128px;
+        height: 260px;
         overflow-y: auto;
         padding-right: 5px;
 
@@ -337,6 +337,8 @@
         cursor: pointer;
         color: #fff;
         justify-content: center;
+        -webkit-transition: .5s;
+        transition: .5s;
 
         @include sm {
             width: 93px;
@@ -348,12 +350,7 @@
         } 
 
         &:hover {
-            color: #ccc;
-            border: 1px solid #ccc;
-
-            & svg path{
-                fill: #ccc;
-            }
+            transform: scale(1.1);
         }
 
         & svg {
@@ -379,10 +376,11 @@
     }
 
     &__icon {
+        -webkit-transition: .5s;
+        transition: .5s;
+
         &:hover {
-            & svg path{
-                fill: #ccc;
-            }
+            transform: scale(1.1);
         }
 
         & svg {
@@ -447,7 +445,6 @@
         }
 
         @include md {
-            margin-bottom: 8px;
             line-height: 40px;
             width: 35px;
             height: 35px;
@@ -494,24 +491,16 @@
 
         & svg {
             width: 30px;
+            -webkit-transition: .5s;
+            transition: .5s;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
 
             @include sm {
                 width: 38px;
-            } 
-
-            &:hover {
-                fill: #ddc160;
-
-                & circle {
-                    stroke: #ddc160;
-                }
-
-                & path {
-                    fill: #fff;
-                }
-            }
-
-            
+            }          
 
         }
 

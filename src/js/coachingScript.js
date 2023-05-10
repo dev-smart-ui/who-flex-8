@@ -57,14 +57,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-const priceBlock = document.querySelectorAll(".price-res");
-
-priceBlock.forEach(item => {
-    item.addEventListener("click", function() {
-        item.classList.toggle("active");
-    });
-});
-
 // video
 
 

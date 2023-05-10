@@ -137,29 +137,33 @@
 }
 
 .price-res {
+    display: block;
     border: 1px solid #343434;
     border-radius: 6px;
     padding: 10px;
     position: relative;
     width: 100%;
-    margin-right: 10px;
     height: 70px;
 
-    @include xs {
-       margin-right: 0;
+    &:not(:last-child) {
+        margin-right: 10px;
     }
 
     @include md {
         height: 80px;
     }
 
-    &.active {
-        border: 1px solid #DDC160;
-
-        &::after{
-            background-color: #DDC160;
+    &-radio {
+        position: absolute;
+        opacity: 0;
+        &:checked+label {
+            border: 1px solid #DDC160;
+    
+            &::after{
+                background-color: #DDC160;
+            }
         }
-    }
+    } 
 
     &::after{
         position: absolute;
@@ -215,13 +219,6 @@
         gap: 10px;
         align-items: center;
     }
-
-    &.prs-150 {
-        max-width: 138px;
-        @include md {
-            max-width: 150px;
-        }
-    }
     
     &.prs-170 {
         max-width: 170px;
@@ -262,7 +259,7 @@
 
     @include md {
         line-height: 26px;
-        font-size: 35px;
+        font-size: 34px;
     }
 }
 
