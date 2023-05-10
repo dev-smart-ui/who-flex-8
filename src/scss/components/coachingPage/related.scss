@@ -3,6 +3,7 @@
 .related {
     overflow-x: hidden;
     padding-bottom: 60px;
+    padding-top: 60px;
 
     @include sm {
         padding-bottom: 90px;
@@ -47,7 +48,7 @@
             padding: 10px 10px 12px;
 
             @include sm {
-                padding: 30px 25px 18px 23px; 
+                padding: 25px 25px 18px 23px; 
             }
         }
     
@@ -161,7 +162,6 @@
 
         @include sm {
             position: static;
-            margin-bottom: 9px;
         }
 
         &__number {
@@ -307,7 +307,6 @@
     }
 
     &-slider {
-        padding-top: 70px;
         overflow: visible;
 
         &-button {
