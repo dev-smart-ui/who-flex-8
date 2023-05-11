@@ -70,7 +70,7 @@
         font-size: 14px;
         line-height: 24px;
         color: #404040;
-        height: 260px;
+        height: 130px;
         overflow-y: auto;
         padding-right: 5px;
 
@@ -130,6 +130,14 @@
 
     &-wrap {
         display: flex;
+    }
+}
+
+.info-card.answer .info-card__text {
+    height: 260px;
+
+    @include md {
+        height: auto;
     }
 }
 
@@ -476,7 +484,7 @@
         @include sm {
             max-width: 288px;
             width: 100%;
-            margin: 15px auto 0;
+            margin: 23px auto 0;
         } 
     }
 

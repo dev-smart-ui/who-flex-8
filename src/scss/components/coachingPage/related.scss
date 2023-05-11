@@ -92,8 +92,10 @@
                 font-weight: 500;
                 font-size: 12px;
                 color: #484848;
+                margin-bottom: 1px;
 
                 @include md {
+                    margin-bottom: 3px;
                     font-size: 14px;
                 }
             }
@@ -174,7 +176,7 @@
         
         &__icon {
             & svg {
-                width: 12px;
+                width: 13px;
 
                 @include md {
                     width: 16px;
