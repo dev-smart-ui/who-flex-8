@@ -2,7 +2,7 @@
 
 .footer-coachind {
     padding:20px 0 ;
-    border-top: 1px solid #6e6e6e;
+    border-top: 1px solid #3e3e3e;
 
     @include md {
         padding: 27px 0 38px;
@@ -63,7 +63,7 @@
         letter-spacing: 0.2px;
 
         @include sm {
-            font-size: 19px;
+            font-size: 18px;
         }
     }
 
