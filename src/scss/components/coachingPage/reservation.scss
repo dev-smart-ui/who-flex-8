@@ -201,11 +201,7 @@
         font-size: 13px;
         color: #000000;
         margin-bottom: 3px;
-
-        @include md {
-            font-size: 14px;
-        }
-
+        
         &_delivery {
             font-size: 13px;
             @include md {
