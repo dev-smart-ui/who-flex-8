@@ -118,17 +118,12 @@
         }
       }
     }
-    .footer__bottom{
-      border: none;
-      padding: 0;
-      justify-content: flex-end;
-    }
     .footer__social{
       gap: 8px;
       min-width: 208px;
       justify-content: center;
       @include md{
-        gap: 4px;
+        gap: 14px;
         justify-content: flex-start;
       }
       svg{
