@@ -6,7 +6,6 @@
     border-radius: 10px;
     padding: 29px 20px 25px;
     width: 100%;
-    max-width: 335px;
 
     @include md {
         max-width: 350px;
@@ -108,11 +107,6 @@
                 background-color: #b8a251;
             }
         }
-       
-
-        &:hover{
-            background-color: grey;
-        }
 
         &:not(:last-child){
             margin-right: 10px;
@@ -132,6 +126,10 @@
             width: 37px;
             height: 37px;
             line-height: 46px;
+
+            &:hover{
+                background-color: grey;
+            }
         }
     }
 }
@@ -197,7 +195,7 @@
 
     &__title {
         display: block;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 13px;
         color: #000000;
         margin-bottom: 3px;
@@ -256,6 +254,11 @@
     @include md {
         line-height: 26px;
         font-size: 33px;
+
+
+        &.not-size {
+            font-size: 34px;
+        }
     }
 }
 
